@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test Suite">
+    <listeners>
+        <listener class-name="demoqa.listeners.ScreenshotListener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="D:/Spring2024Java/DemoQA">
+        <classes>
+            <class name="demoqa_tests.AlertTest"/>
+            <class name="demoqa_tests.BrowserWindowTest"/>
+            <class name="demoqa_tests.ButtonsTest"/>
+            <class name="demoqa_tests.CheckBoxTest"/>
+            <class name="demoqa_tests.FramesTest"/>
+            <class name="demoqa_tests.SelectMenuTest"/>
+            <class name="demoqa_tests.TextBoxTests"/>
+<!--            <class name="demoqa_tests.PracticeFormTest"/>-->
+            <class name="demoqa_tests.RadioButtonTest"/>
+            <class name="demoqa_tests.LinksTest"/>
+        </classes>
+    </test>
+</suite>
