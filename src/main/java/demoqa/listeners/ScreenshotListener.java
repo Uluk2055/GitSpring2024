@@ -16,12 +16,12 @@ public class ScreenshotListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         if (driver != null) {
-            saveScreenshotPNG();
+            saveScreenshotPNG(driver);
         }
     }
 
     @Attachment(value =  "Page screenshot", type = "image/png")
-    public byte[] saveScreenshotPNG() {
+    public byte[] saveScreenshotPNG(WebDriver driver) {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
