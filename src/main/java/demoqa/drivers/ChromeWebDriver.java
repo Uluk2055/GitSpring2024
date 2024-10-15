@@ -1,6 +1,7 @@
 package demoqa.drivers;
 
 import demoqa.utils.ConfigReader;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.Getter;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.PageLoadStrategy;
@@ -24,7 +25,7 @@ public class ChromeWebDriver {
 
 
     public static WebDriver loadChromeDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
